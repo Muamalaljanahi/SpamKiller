@@ -17,14 +17,13 @@ SpamKiller is a powerful tool designed to protect your TeamTalk server from spam
 4. If it's the first time running SpamKiller, it will prompt you to configure your preferences.
 
 #### Running SpamKiller as a System Service
-1. After connecting to your server, use `systemctl` to manage the bot's execution with the system.
-2. Navigate to the `systemctl` folder: `cd systemctl`.
-3. Edit the `spamkiller.service` file and update the `WorkingDirectory` and `ExecStart` paths.
+1. Navigate to the `systemctl` folder inside the bot folder: `cd systemctl`.
+2. Edit the `spamkiller.service` file and update the `WorkingDirectory` and `ExecStart` paths.
    - `WorkingDirectory` should point to the bot's folder.
    - `ExecStart` should point to the executable file.
-4. Move the `spamkiller.service` file located inside `systemctl` to the bot's folder: `mv spamkiller.service /etc/systemd/system`.
-5. Activate the bot to start on system boot: `systemctl enable spamkiller`.
-6. Start the bot: `systemctl start spamkiller`.
+3. Move the `spamkiller.service` file located inside the bot's folder: `mv spamkiller.service /etc/systemd/system`.
+4. Activate the bot to start on system boot: `systemctl enable spamkiller`.
+5. Start the bot: `systemctl start spamkiller`.
 
 ## what's new
 ### Version 1.1
